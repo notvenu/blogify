@@ -133,7 +133,7 @@ export class Service {
         console.error("Appwrite Service Error:: getFilePreview::", error);
         throw error;
     }
-  }
+  } 
 }
 
 const service = new Service();
