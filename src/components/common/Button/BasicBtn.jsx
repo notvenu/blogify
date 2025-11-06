@@ -1,17 +1,16 @@
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import React from "react";
 
-export default function BasicBtn({
+export default function Button({
     children,
-    color="inherit",
-    type="button",
+    type = "button",
+    bgColor = "bg-blue-600",
     textColor = "text-white",
     className = "",
     ...props
 }) {
-  return (
-    <Stack spacing={2} direction="row">
-      <Button variant="contained" className={`${color} ${type} ${textColor} ${className}`} {...props}>{children}</Button>
-    </Stack>
-  );
+    return (
+        <button className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}>
+            {children}
+        </button>
+    );
 }
